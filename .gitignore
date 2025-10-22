@@ -36,4 +36,36 @@ htmlcov/
 # Logs
 *.log
 
-# Note: not ignoring outputs/ by default so artifacts stay tracked.
+# Environment variables / secrets
+.env
+.env.*
+*.env
+*.secrets
+*.key
+
+# Data and outputs (keep placeholders)
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Model artifacts and checkpoints
+models/
+checkpoints/
+artifacts/
+*.pkl
+*.joblib
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.onnx
+
+# Local databases / archives
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.tar
+*.tar.gz
+*.7z
