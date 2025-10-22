@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Type checker / linters
+.mypy_cache/
+.ruff_cache/
+.pylint.d/
+
+# Python
+.python-version
+
+# Logs
+*.log
+
+# Note: not ignoring outputs/ by default so artifacts stay tracked.
