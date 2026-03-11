@@ -16,6 +16,7 @@ The goal is to optimize inventory, reduce waste, and improve supply chain decisi
 
 ## 📂 Data Description  
 The dataset includes (or should include) columns such as:  
+
 - `Product_ID` — unique identifier for each product  
 - `Product_Category` — category or type of product  
 - `Units_Sold` — the number of units sold in a time period  
@@ -28,12 +29,14 @@ The dataset includes (or should include) columns such as:
 ---
 
 ## 🧰 Tools & Dependencies  
-This project uses:  
+
+This project uses:
+
 - Python  
 - pandas, numpy  
 - matplotlib, seaborn  
-- scikit-learn (or your chosen ML library)  
-- JupyterLab or Google Colab  
+- scikit-learn  
+- JupyterLab / Google Colab  
 
 Install dependencies with:
 
