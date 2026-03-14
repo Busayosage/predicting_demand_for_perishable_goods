@@ -170,19 +170,6 @@ predicting_demand_for_perishable_goods/
 
 In your current repository, the main notebook (`predicting_demand_for_perishable_goodipynb.ipynb`) resides at the root.  Moving it into a `notebooks` directory improves organisation.  Similarly, the CSV files such as `product_details.csv` could be moved into the `data` directory to keep data separate from code.  Including an `outputs` directory with example charts signals that visualisation files are intentionally stored and makes them easy to find.  A `src` folder is optional but useful for modular Python scripts if the analysis grows beyond a single notebook.
 
----
-
-## 🎨 Suggestions for Additional Visualisations
-
-To further enhance the portfolio, consider adding the following charts:
-
-- **Category sales composition**: A stacked bar or area chart showing each category’s contribution to total sales over time.  This highlights shifts in customer preferences.
-- **Wastage vs units sold**: Scatter or bubble charts contrasting wastage with demand by product to identify inefficiencies.
-- **Correlation heatmap**: A seaborn heatmap of the correlation matrix to quickly reveal relationships between variables such as price, marketing spend, discount percent, units sold and wastage.
-- **Forecast vs actual plot**: If you implement a simple forecasting model, plot predicted demand against actual sales on a hold‑out period to visualise accuracy.
-- **Interactive dashboards**: Tools like Plotly Dash or Streamlit can produce interactive plots, giving recruiters a dynamic view of your analysis.
-
-These enhancements are optional but demonstrate initiative and a deeper understanding of exploratory analytics.
 
 ---
 
