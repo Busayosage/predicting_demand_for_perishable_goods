@@ -1,71 +1,73 @@
-# Predicting Demand for Perishable Goods
+# Predicting Demand for Perishable Goods – Forecasting & Pricing Analysis
+
+## Short Overview
+This project analyses perishable goods sales data to forecast future demand and understand how price changes affect sales. It brings together historical sales, product attributes, store information, and external factors to build predictive models and visualise demand patterns.
 
 ## Business Problem
-Retailers dealing with perishable goods face a constant trade-off: order too little and they lose sales, order too much and they increase spoilage and waste. To make better stock decisions, they need a clearer view of how demand changes across product categories, pricing, promotions, stores and external conditions.
+Retailers dealing with perishable goods face a constant trade‑off: order too little and they miss sales, order too much and they increase spoilage and waste. Effective inventory and pricing decisions require a clear understanding of how demand responds to price, promotions, store characteristics and external conditions such as holidays or weather.
 
-## Objective
-The objective of this project is to analyse historical perishable-goods sales data and identify the main factors affecting demand, wastage and stock efficiency. The project also explores simple forecasting logic that could support better ordering decisions.
+## Solution / Project Purpose
+The project builds forecasting models and analyses price elasticity to provide decision makers with actionable insights. It combines data cleaning, exploratory analysis and statistical modelling to predict demand and reveal key drivers, enabling retailers to plan inventory and pricing strategies that reduce waste and maximise revenue.
 
-## Data Used
-The analysis uses multiple structured datasets to build a fuller view of demand:
+## Key Features
+- Uses multiple structured datasets including sales history, product details, store information and external factors.
+- Creates time‑series forecasts of demand at product‑category and store level.
+- Analyses price elasticity of demand to understand how price changes impact sales.
+- Generates visualisations to highlight demand trends and price‑sales relationships.
+- Provides a reproducible workflow in Python with notebooks and scripts.
 
-- weekly sales data
-- product details
-- store information
-- supplier information
-- weather and holiday data
+## Tools and Technologies
+- Python with Pandas and NumPy for data manipulation.
+- Statsmodels and Scikit‑learn for statistical modelling and machine learning.
+- Matplotlib and Seaborn for visualisation.
+- Jupyter Notebook for interactive analysis.
 
-These datasets allow demand to be analysed in the context of price, marketing, shelf life, store characteristics and external conditions.
+## Workflow / Method
+1. **Data loading and validation:** Load and merge weekly sales, product details, store and holiday data.
+2. **Exploratory analysis:** Analyse demand patterns by product, store and time; assess price distributions and relationships.
+3. **Feature engineering:** Create lagged variables, moving averages and holiday indicators to capture demand drivers.
+4. **Model building:** Train time‑series models and regression models to forecast demand and estimate price elasticity.
+5. **Evaluation:** Compare model performance using appropriate error metrics and visual diagnostics.
+6. **Visualisation:** Produce charts to communicate demand trends and price vs sales relationships.
 
-## Approach
-The project follows a practical analytics workflow:
+## Key Insights or Outcomes
+The analysis highlights seasonal patterns and product‑level trends in perishable goods demand. Price sensitivity varies across categories; certain products show strong elasticity while others are less responsive. These insights help optimise ordering policies and promotional strategies.
 
-1. **Data loading and validation**
-   - Loaded the datasets into Python
-   - Checked for missing values, duplicates and incorrect data types
-   - Joined the datasets into a single analysis-ready view
+## Business or Practical Impact
+By forecasting demand and understanding price elasticity, retailers can align inventory with expected sales and adjust pricing to drive revenue. This reduces waste from over‑ordering, prevents lost sales due to stockouts and supports data‑driven decision making in pricing and promotions.
 
-2. **Exploratory analysis**
-   - Analysed sales trends over time
-   - Compared performance across product categories and locations
-   - Examined wastage patterns on short shelf-life products
+## Visual Outputs
+### Demand Trend
+<p align="center">
+  <img src="outputs/demand_trend_chart.png" width="700"/>
+</p>
 
-3. **Driver analysis**
-   - Explored the relationship between price and units sold
-   - Reviewed how marketing spend related to demand
-   - Looked at the effect of weather and holidays on weekly sales
+### Price vs Sales
+<p align="center">
+  <img src="outputs/price_vs_sales_chart.png" width="700"/>
+</p>
 
-4. **Forecast exploration**
-   - Used simple baseline forecasting logic to estimate future demand
-   - Assessed how demand patterns could support better stock planning
+## Project Structure
+```
+predicting_demand_for_perishable_goods/
+├── data/                  # Raw datasets (not included here)
+├── notebooks/             # Jupyter notebooks for analysis and modelling
+├── outputs/
+│   ├── demand_trend_chart.png
+│   ├── price_vs_sales_chart.png
+│   └── validation_predictions.csv
+├── src/                   # Python scripts for loading data, training models and evaluation
+├── tools/                 # Utility scripts or helper functions
+└── README.md
+```
 
-## Tools
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+## How to Run or View
+1. Clone the repository and install the dependencies listed in `requirements.txt`.
+2. Open the notebooks in the `notebooks` folder to follow the analysis and model building process.
+3. Run the Python scripts in `src` to reproduce the forecasts and elasticity estimates.
+4. View the charts saved in the `outputs` folder for quick insights.
 
-## Key Results
-- Demand varied significantly by product category, with some categories showing more consistent weekly patterns than others.  
-  **Business decision:** Stock planning should be category-specific rather than using one blanket ordering approach.
-
-- Higher prices generally aligned with lower sales volumes, though the strength of that relationship differed by category.  
-  **Business decision:** Pricing changes should be targeted, because not all products respond in the same way to price movement.
-
-- Marketing spend appeared to support demand up to a point, but the relationship was not unlimited.  
-  **Business decision:** Promotional spend should be allocated selectively rather than increased uniformly.
-
-- Short shelf-life categories showed higher wastage risk when demand was overestimated.  
-  **Business decision:** These products need closer forecasting attention and tighter replenishment logic.
-
-## Business Impact
-This project shows how operational and commercial data can support better inventory decisions in a retail setting. The value is not just in describing sales patterns, but in helping a business decide:
-
-- what to stock more carefully
-- where demand is predictable
-- where pricing needs closer review
-- which products carry the highest waste risk
-
-In practice, this kind of analysis can help reduce spoilage, improve stock availability, and support more disciplined demand planning.
+## Future Improvements
+- Incorporate external factors such as weather data, promotions and marketing campaigns to improve forecasts.
+- Explore more advanced forecasting techniques like Prophet or gradient boosted trees.
+- Build an interactive dashboard to allow stakeholders to explore demand scenarios and pricing impacts.
